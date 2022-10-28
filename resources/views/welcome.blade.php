@@ -8,16 +8,29 @@
     <title>Document</title>
 </head>
 <body>
-Hello world!
 <form action="add" method="POST">
     @csrf
-    <label for="name">Name:</label>
-    <input type="text" name="name">
-    <label for="email">email:</label>
-    <input type="text" name="email">
-    <label for="message">Message:</label>
-    <textarea name="message"></textarea>
+    <div><label for="name">Name:</label>
+        <input type="text" name="name">
+    </div>
+    <div>
+        <label for="email">email:</label>
+        <input type="text" name="email">
+    </div>
+    <div>
+        <label for="message">Message:</label>
+        <textarea name="message"></textarea>
+    </div>
     <button>Send</button>
+    <?php
+    foreach ($messages as $message) {
+    ?>
+    <div><?=$message->name?></div>
+    <div><?=$message->email?></div>
+    <div><?=$message->message?></div>
+    <?php
+    }
+    ?>
 </form>
 </body>
 </html>

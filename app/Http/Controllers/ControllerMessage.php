@@ -7,8 +7,10 @@ use App\Models\Message;
 class ControllerMessage extends Controller
 {
     public function index(){
-        $message = Message::all();
-        dd($message);
+        /*$message = Message::all();
+        dd($message);*/
+        $messages = Message::all();
+        return view('welcome', ['messages'=>$messages]);
     }
     public function create(){
 
