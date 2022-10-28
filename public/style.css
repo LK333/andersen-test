@@ -1,0 +1,16 @@
+input, textarea{
+    position:absolute;
+    left:7%;
+}
+div{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+form{
+    margin-bottom: 100px;
+}
+button{
+    margin-top: 20px;
+    position:absolute;
+    left:7%;
+}
