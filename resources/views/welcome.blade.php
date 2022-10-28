@@ -9,11 +9,15 @@
 </head>
 <body>
 Hello world!
-<form>
-    {{--name
-    email
-    message
-    button--}}
+<form action="add" method="POST">
+    @csrf
+    <label for="name">Name:</label>
+    <input type="text" name="name">
+    <label for="email">email:</label>
+    <input type="text" name="email">
+    <label for="message">Message:</label>
+    <textarea name="message"></textarea>
+    <button>Send</button>
 </form>
 </body>
 </html>

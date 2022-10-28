@@ -13,4 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/messages', 'App\Http\Controllers\ControllerMessage@index');
+Route::get('/messages', function (){
+    return view('welcome');
+});
+Route::post('/add', 'App\Http\Controllers\ControllerMessage@create');
