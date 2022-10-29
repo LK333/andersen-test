@@ -20,7 +20,7 @@ class ControllerMessage extends Controller
             'message' => 'required',
         ]);
         if($validator->fails()){
-            redirect('/messages')->withErrors($validator);
+            redirect('/')->withErrors($validator);
         }
 
         $messages = [
@@ -30,6 +30,6 @@ class ControllerMessage extends Controller
         ];
 
         Message::create($messages);
-        return redirect('/messages');
+        return redirect('/');
     }
 }
