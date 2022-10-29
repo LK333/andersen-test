@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 <br>
-<form action="add" method="POST">
+<form action="/add" method="POST">
     @csrf
     <div><label for="name" >Name:</label>
         <input type="text" name="name">
